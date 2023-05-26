@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
 import { Drink } from 'src/app/services/drinks.service';
 
 @Component({
@@ -9,8 +10,9 @@ import { Drink } from 'src/app/services/drinks.service';
 export class DrinkGraphicComponent implements OnInit {
   @Input() drink: Drink;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {}
-
+  ngOnInit() {
+    console.log(this.drink.recipe);
+  }
 }
